@@ -19,6 +19,12 @@ namespace TestProject3
             // Create object of ChromeDriver
             options = new ChromeOptions();
             options.AddArgument("--headless");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+            options.AddArgument("--disable-gpu");
+            options.AddArgument("--window-size=1920,1080");
+            options.AddArgument("--disable-extensions");
+            options.AddArgument("--remote-debugging-port=9222");
             driver = new ChromeDriver(options); 
             
 
